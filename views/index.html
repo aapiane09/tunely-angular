@@ -32,9 +32,26 @@
         means that the controller's alias within the HTML will be
         albumsIndexCtrl-->
     <div class="container" ng-controller="AlbumsIndexController as albumsIndexCtrl">
-      <input type="text" class="form-control" placeholder="New album name" ng-model="albumsIndexCtrl.newAlbum.name">
-      <input type="text" class="form-control" placeholder="New album artist" ng-model="albumsIndexCtrl.newAlbum.artistName">
-      <p><b>albumsIndexCtrl.newAlbum:</b> {{albumsIndexCtrl.newAlbum}}</p>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <form class="form-inline" ng-submit="albumsIndexCtrl.createAlbum()">
+            <div class="form-group ">
+              <label for="exampleInputName2">Name</label>
+              <input type="text" class="form-control" id="newAlbumName" placeholder="New album name" ng-model="albumsIndexCtrl.newAlbum.name">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail2">Email</label>
+              <input type="text" class="form-control" id="newArtistName" placeholder="New album artist" ng-model="albumsIndexCtrl.newAlbum.artistName">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail2">Email</label>
+              <input type="text" class="form-control" id="newReleaseDate" placeholder="Release date" ng-model="albumsIndexCtrl.newAlbum.releaseDate">
+            </div>
+            <button type="submit" class="btn btn-default">Submit New Album</button>
+          </form>
+        </div>
+        <p class="text-center"><b>albumsIndexCtrl.newAlbum:</b> {{albumsIndexCtrl.newAlbum}}</p>
+      </div>
       <input type="text" class="form-control" ng-model="searchText" placeholder="Search Albums">
       <div ng-repeat="album in albumsIndexCtrl.albums | orderBy: 'name' | filter: searchText" class="row">
 
@@ -54,10 +71,13 @@
                       <h4 class="inline-header">Album Name:</h4>
                       <span>{{album.name}}</span>
                     </li>
-
                     <li class="list-group-item">
                       <h4 class="inline-header">Artist Name:</h4>
                       <span>{{album.artistName}}</span>
+                    </li>
+                    <li class="list-group-item">
+                      <h4 class="inline-header">Release Date:</h4>
+                      <span>{{album.releaseDate}}</span>
                     </li>
                   </ul>
                 </div>
