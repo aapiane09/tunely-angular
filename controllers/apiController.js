@@ -9,9 +9,5 @@ function index(req, res) {
   });
 }
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> fae59e1dc8b10ca043e894bd7fc30706efbc87b3
 module.exports.index = index;

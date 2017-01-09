@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+# At first, I was pretty lost as to how to set the app up, since it was so different from anything I had done before. But after I got a handle on what I was supposed to do, it was surprisingly easy to set up. I especially liked the logic and elegance behind the `editing=!editing` toggle that was used in the solution. The hardest part was getting the cancel button to work, as it turns out my issue was that I had the toggle positioned incorrectly after the page reload.
+
+
 <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60">
 
 
@@ -57,5 +59,3 @@ Before starting this lab, developers should have some familiarity with...
 #### Sprint 5
 
 [Sprint 5: add ability to CRUD songs](/docs/sprint5.md)
-=======
->>>>>>> fae59e1dc8b10ca043e894bd7fc30706efbc87b3
